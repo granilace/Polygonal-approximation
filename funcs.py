@@ -11,8 +11,15 @@ INF = 1e15
 
 
 # Plots curve by points
-def plot_curve(list_of_points):
+def plot_sample(list_of_points):
     plt.plot(*zip(*list_of_points), color='black')
+    plt.show()
+    
+# Plots two curves(original image and approxed image)
+def plot_curve(original_image, approx_image):
+    plt.plot(*zip(*original_image), color='black')
+    plt.plot(*zip(*approx_image), color='red')
+    plt.scatter(*zip(*approx_image), color='green')
     plt.show()
 
 # Checks pixel
